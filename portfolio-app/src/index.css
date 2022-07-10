@@ -1,0 +1,48 @@
+/************ Default Css ************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body {
+  font-family: "Poppins",sans-serif !important;
+  font-weight: 400;
+  background-color: #121212 !important;
+  color: #fff !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+p,a,li,button, ul{
+  margin:0;
+  padding: 0;
+  line-height: normal;
+  text-decoration: none;
+}
+a{
+  color:#fff;
+}
+a:hover{
+  color: #fff;
+}
+
+img{
+  width:100%;
+  height:auto;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
