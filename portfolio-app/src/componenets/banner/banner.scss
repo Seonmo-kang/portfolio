@@ -1,0 +1,186 @@
+
+$banner-size: 100vh;
+$main-font-weight: 600;
+$secondary-font-weight: 400;
+$secondary-text-color: #ebebeb;
+
+@import 'animate.css';
+
+.banner{
+    overflow: hidden;
+    padding-top: 50px;
+    width: 100%;
+    height: $banner-size;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s;
+    & h5{
+        color: #8d8d8d;
+        margin-top: 20px;
+        font-weight: $secondary-font-weight;
+        font-size :15px;
+        letter-spacing:3px;
+    }
+}
+/* AnimatedLetters */
+/* text animate */
+.text-animate{
+    display: inline-block;
+    opacity: 0;
+    animation: bounceIn 1s 1s;
+    animation-fill-mode: forwards;
+    min-width:10px;
+}
+@for $i from 1 through 35 {
+    .text-animate._#{$i} {
+        animation-delay: #{$i / 10}s;
+    }
+}
+.text-animate-hover {
+    display: inline-block;
+    animation-fill-mode: both;
+    min-width: 10px;
+    z-index: 2;
+    &:hover {
+        animation: rubberBand 1s;
+        color: #ffd700;
+    }
+}
+// #2196f3
+// #a6f900
+@mixin neon-button($color) {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-decoration:none;
+    overflow: hidden;
+    transition:0.2s;
+    color: white;
+    font-weight: $main-font-weight;
+    border: 1px solid white;
+    &:hover{
+        color: #255784;
+        background: $color;
+        box-shadow: 0 0 10px $color, 0 0 40px $color, 0 0 80px $color;
+        transition-delay: 1s;
+    }
+
+    & span{
+        position: absolute;
+        display:block;
+    }
+    & span:nth-child(1){
+        top:0;
+        left: -100%;
+        width:100%;
+        height:4px;
+        background: linear-gradient(90deg,transparent,$color);
+    }
+    &:hover span:nth-child(1){
+        left:100%;
+        transition: 1s;
+    }
+
+    & span:nth-child(2){
+        top: -100%;
+        right:0;
+        width:4px;
+        height:100%;
+        background: linear-gradient(180deg,transparent,$color); 
+    }
+    &:hover span:nth-child(2){
+        top:100%;
+        transition: 1s;
+        transition-delay: 0.25s;
+    }
+
+    & span:nth-child(3){
+        bottom:0;
+        right: -100%;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(270deg,transparent,$color);
+    }
+    &:hover span:nth-child(3){
+        right:100%;
+        transition: 1s;
+        transition-delay: 0.5s;
+    }
+
+    & span:nth-child(4){
+        bottom:-100%;
+        left:0;
+        width:4px;
+        height: 100%;
+        background: linear-gradient(360deg,transparent,$color);
+    }
+    &:hover span:nth-child(4){
+        bottom:100%;
+        transition: 1s;
+        transition-delay: 0.75s;
+    }
+}
+.flat-button{
+    &.blue{
+        @include neon-button(#2196f3);
+    }
+    &.yellow{
+        @include neon-button(#a6f900)
+    }
+}
+
+#canvas{
+    position: absolute;
+    width:100%;
+    height: $banner-size;
+}
+#ballon{
+    position:absolute;
+    width : 10px;
+    height: 10px;
+    background-color: wheat;
+    border-radius: 50%;
+}
+
+.banner-container{
+    height:100%;
+}
+.banner-box{
+    width:100%;
+}
+.banner-text{
+    font-weight: $main-font-weight;
+    z-index:2;
+    & h1{
+        font-size:30px;
+    }
+}
+.banner-description{
+    font-size:20px;
+    font-weight: $secondary-font-weight;
+    color: $secondary-text-color;
+    align-self:flex-end;
+}
+
+.banner .h1{
+    font-size: 65px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+}
+.banner .tagline {
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 8px 10px;
+    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+    margin-bottom: 16px;
+    display: inline-block;
+}
+
+.wrap {
+    border-right: 0.2em solid #666;
+}

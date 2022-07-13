@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import {Navbar, Nav, Container, Offcanvas } from "react-bootstrap";
 import { Github, Linkedin } from 'react-bootstrap-icons';
 import './navbar.css';
@@ -6,14 +6,21 @@ import './navbar.css';
 const NavBar = () => {
     const [activeLink,setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
+    const [scrollPosition,setScrollPosition] = useState(0);
 
     useEffect(()=>{
       const onScroll = () =>{
-        if (window.scrollY>50){
+        // if (window.scrollY>50){
+        //   setScrolled(true);
+        // }else{
+        //   setScrolled(false);
+        // }
+        if (scrollPosition < window.scrollY){
           setScrolled(true);
         }else{
           setScrolled(false);
         }
+        setScrollPosition(window.scrollY);
       }
 
       window.addEventListener("scroll", onScroll);
@@ -26,10 +33,10 @@ const NavBar = () => {
     }
 
     return (
-      <Navbar collapseOnSelect expand="sm" fixed="top" className={ scrolled ? 'navbar scrolled' : 'navbar'} bg="dark" variant="dark">
+      <Navbar collapseOnSelect expand="md" fixed="top" className={ scrolled ? 'navbar scrolled' : 'navbar'} bg="dark" variant="dark">
         <Container>
           <Navbar.Brand className='logo' href="#home">
-            <img src={''} alt="logo"/> Seonmo
+            Seonmo Kang
           </Navbar.Brand>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-sm`} />
           {/* <Navbar.Collapse  className="link-list" id="responsive-navbar-nav">
