@@ -1,5 +1,6 @@
 .skills{
     position: relative;
+    margin: 3em 0;
 }
 .skill-section{
     background-color: #121212;
@@ -16,22 +17,23 @@
     font-weight:700;
 }
 .skill-desciption{
+    padding: 0 2.5em;
     align-self: center;
-}
-.skill-slider p{
-    color:#B8B8B8;
-    font-size: 18px;
-    letter-spacing: 0.8px;
-    line-height: 1.5em;
-    margin: 15px 0 75px 0;
 }
 .skill-slider .item{
     width:80%;
     margin:0 auto;
     position: relative;
     text-align: center;
-}
-.skill-slider .item img{
-    width:50%;
-    margin: 0 auto 15px auto;
+    & img{
+        width:50%;
+        margin: 0 auto 15px auto;
+    }
+    & p{
+        color:#B8B8B8;
+        font-size: clamp(1em,1vw,1.5em);
+        letter-spacing: 0.8px;
+        line-height: 1.5em;
+        margin: 15px 0 75px 0;
+    }
 }

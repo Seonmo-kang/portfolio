@@ -2,7 +2,7 @@ import React,{useState, useEffect} from 'react'
 import { Container, Col, Row } from 'react-bootstrap';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import "./skills.css";
+import "./skills.scss";
 
 const Skills = () => {
     const responsive = {
@@ -27,20 +27,20 @@ const Skills = () => {
   return (
     <section className='skills' id="skills">
         <Container>
-            <Row className='skill-section mx-md-3'>
-                <Col className='px-sm-3 p-0'>
+            <Row className='skill-section mx-1 mx-md-2 mx-lg-5'>
+                <Col className='px-sm-3 pt-5'>
                     <div className='skill-bx p-md-3'>
                         <h2 className='skill-subject'>Skills</h2>
                         <div className='skill-desciption'>
-                            <p>You can find the list of my top skills below.</p>
-                            <p>I'm also open to learn more about related frameworks, libraries, languages, etc!</p>
+                            <span>You can find the list of my top skills below.
+                            I'm also open to learn more about related frameworks, libraries, languages, etc!</span>
                         </div>
                     </div>
                     <Carousel responsive={responsive} infinite={true} className="skill-slider">
                         <div className="item">
                             <img alt="image of circle and keep moving"/>
                             <h5>Web Development</h5>
-                            <p>HTML,JavaScript,CSS,ReactJS,Redux</p>
+                            <p>HTML,JavaScript,CSS <br/>ReactJS, Redux, django</p>
                         </div>
                         <div className='item'>
                             <img alt="image of circle and keep moving"/>
