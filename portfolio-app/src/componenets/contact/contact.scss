@@ -1,0 +1,84 @@
+@import '../banner/banner.scss';
+
+.contact{
+    position: relative;
+    margin: 3em 0;
+}
+.contact-section{
+    background-color: #121212;
+    border-radius: 25px;
+}
+.contact-bx{
+    margin-bottom: 3em;
+    color:#B8B8B8;
+}
+.contact-subject{
+    text-align: center;
+    color:aliceblue;
+    font-size:30px;
+    font-weight:700;
+}
+.contact-desciption{
+    padding: 0 2.5em;
+    align-self: center;
+}
+.contact-form{
+    width:100%;
+    margin-top:20px;
+    ul{
+        padding:0;
+        margin:0;
+
+        li{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            margin-bottom: 10px;
+            overflow:hidden;
+            display: block;
+            opacity: 0;
+            animation: fadeInUp 2s 2s;
+            animation-fill-mode: forwards;
+            clear: both;
+        }
+    }
+    li.half{
+        width: 49%;
+        margin-left: 2%;
+        float: left;
+        clear:none;
+        &:first-child{
+            margin-left: 0;
+        }
+    }
+    input[type='text'], input[type='email']{
+        width:100%;
+        border:0;
+        background: #585858;
+        height: 50px;
+        font-size: 16px;
+        color: #fff;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    textarea{
+        width:100%;
+        border:0;
+        background: #585858;
+        height:50px;
+        font-size: 16px;
+        color:#fff;
+        padding:20px;
+        min-height: 150px;
+        box-sizing:border-box;
+    }
+    .flat-button{
+        &.yellow{
+            background: #585858;
+        }
+        &:hover.yellow{
+            background: #a6f900;
+        }
+    }
+}
+

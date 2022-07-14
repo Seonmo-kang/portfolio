@@ -13,6 +13,7 @@ function App() {
       <Banner></Banner>
       <About></About>
       <Skills></Skills>
+      <Contact></Contact>
     </>
   );
 }
