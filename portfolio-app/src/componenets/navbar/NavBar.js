@@ -58,7 +58,7 @@ const NavBar = () => {
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   <Nav.Link href='#home' className={activeLink === 'home'? 'active navbar-link' : 'navbar-link'} onClick={()=> onUpdateActiveLink('home')}>Home</Nav.Link>
-                  <Nav.Link href='#project' className={activeLink === 'project'? 'active navbar-link' : 'navbar-link'} onClick={()=> onUpdateActiveLink('project')}>Project</Nav.Link>
+                  <Nav.Link href='#projects' className={activeLink === 'projects'? 'active navbar-link' : 'navbar-link'} onClick={()=> onUpdateActiveLink('projects')}>Projects</Nav.Link>
                   <Nav.Link href={resume} download className={activeLink === 'resume'? 'active navbar-link' : 'navbar-link'} onClick={()=> onUpdateActiveLink('skills')}>Resume</Nav.Link>
                   <Nav.Link href='#contact' className={activeLink === 'contact'? 'active navbar-link' : 'navbar-link'} onClick={()=> onUpdateActiveLink('contact')}>Contact</Nav.Link>
                 </Nav>

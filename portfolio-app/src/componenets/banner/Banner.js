@@ -124,9 +124,6 @@ const Banner = () => {
     return (
         <section className='banner' id="home">
                 <canvas id='canvas'/>
-                {/* { ballonPosition.map((ballon,index)=>(
-                    <Ballon key={index} x={ballon.x} y={ballon.y} image={ballon.image} speed={ballon.speed} ballons={ballons}></Ballon>
-                ))} */}
                 <a style={{ display :"none" }} href="https://kor.pngtree.com/free-backgrounds'">Pngtree.com</a>
                 <Container className='banner-container d-flex flex-wrap flex-direction-row align-items-center'>
                     <Row className='banner-box'>
