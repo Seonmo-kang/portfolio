@@ -2,25 +2,22 @@ import React, {useState, useEffect, useRef} from 'react';
 import {Navbar, Nav, Container, Offcanvas } from "react-bootstrap";
 import { Github, Linkedin } from 'react-bootstrap-icons';
 import './navbar.css';
+import resume from '../../img/resume/Seonmo_Kang_Resume.pdf';
 
 const NavBar = () => {
     const [activeLink,setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
-    const [scrollPosition,setScrollPosition] = useState(0);
+
+    const scrollPosition = useRef();
 
     useEffect(()=>{
       const onScroll = () =>{
-        // if (window.scrollY>50){
-        //   setScrolled(true);
-        // }else{
-        //   setScrolled(false);
-        // }
-        if (scrollPosition < window.scrollY){
+        if (scrollPosition.current < window.scrollY){
           setScrolled(true);
         }else{
           setScrolled(false);
         }
-        setScrollPosition(window.scrollY);
+        scrollPosition.current=window.scrollY;
       }
 
       window.addEventListener("scroll", onScroll);
@@ -62,7 +59,7 @@ const NavBar = () => {
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   <Nav.Link href='#home' className={activeLink === 'home'? 'active navbar-link' : 'navbar-link'} onClick={()=> onUpdateActiveLink('home')}>Home</Nav.Link>
                   <Nav.Link href='#project' className={activeLink === 'project'? 'active navbar-link' : 'navbar-link'} onClick={()=> onUpdateActiveLink('project')}>Project</Nav.Link>
-                  <Nav.Link href='#skills' className={activeLink === 'skills'? 'active navbar-link' : 'navbar-link'} onClick={()=> onUpdateActiveLink('skills')}>Skills</Nav.Link>
+                  <Nav.Link href={resume} download className={activeLink === 'resume'? 'active navbar-link' : 'navbar-link'} onClick={()=> onUpdateActiveLink('skills')}>Resume</Nav.Link>
                   <Nav.Link href='#contact' className={activeLink === 'contact'? 'active navbar-link' : 'navbar-link'} onClick={()=> onUpdateActiveLink('contact')}>Contact</Nav.Link>
                 </Nav>
                 <Nav className='social-links'>
