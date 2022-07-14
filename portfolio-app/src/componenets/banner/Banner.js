@@ -109,7 +109,7 @@ const Banner = () => {
 
     /* letter animate */
     const [letterClass, setLetterClass] = useState('text-animate');
-    const array = ['H','i','!',' ','I',"'",'m',' ','S','e','o','n','m','o'," ",":",")"];
+    const array = ['H','i','!',' ','I',"'",'m',' ','S','e','o','n','m','o'];
     useEffect(() => {
         
         let timeoutId = setTimeout(() => {
@@ -130,7 +130,7 @@ const Banner = () => {
                 <a style={{ display :"none" }} href="https://kor.pngtree.com/free-backgrounds'">Pngtree.com</a>
                 <Container className='banner-container d-flex flex-wrap flex-direction-row align-items-center'>
                     <Row className='banner-box'>
-                        <Col xs={12} md={6} xl={5} className='banner-text'>
+                        <Col xs={12} md={12} xl={12} className='banner-text my-2'>
                             <span className='tagline'>Welcome to my Portfolio!</span>
                             <h1>
                                 <AnimatedLetters
@@ -138,11 +138,11 @@ const Banner = () => {
                                 strArray={array}
                                 idx={15} />
                             </h1>
-                            <h1><span className='wrap' id='rotate-wrap'>{text}</span></h1>
+                            <h3><span className='wrap' id='rotate-wrap'>{text}</span></h3>
                             <h5> Software Engineer / Web Developer / Full-Stack Developer </h5>
                         </Col>
-                        <Col xs={12} md={6} xl={7} className='banner-description mt-md-0 mt-3 align-end'>
-                            <p>I'm living in NJ, USA. I enjoy creating things that live on the internet. I keep learning new skills and technology for my goal.</p>
+                        <Col xs={12} md={12} xl={12} className='banner-description mt-md-0 mt-3'>
+                            <p>I'm living in NJ, USA. I enjoy creating things that live on the internet. I am a creative developer who is passionate about building amazing software. I keep learning new skills and technology for my goal. </p>
                         </Col>
                         <Col className="mt-5 text-center" xs={12} md={6}>
                             <a className="flat-button blue" href="#contact">
