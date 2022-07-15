@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import {Navbar, Nav, Container, Offcanvas } from "react-bootstrap";
 import { Github, Linkedin } from 'react-bootstrap-icons';
-import './navbar.css';
+import './navbar.scss';
 import resume from '../../img/resume/Seonmo_Kang_Resume.pdf';
 
 const NavBar = () => {
@@ -35,23 +35,15 @@ const NavBar = () => {
           <Navbar.Brand className='logo' href="#home">
             Seonmo Kang
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-sm`} />
-          {/* <Navbar.Collapse  className="link-list" id="responsive-navbar-nav">
-            <Nav className="ms-auto">
-            <Nav.Link href='#home' className={activeLink === 'home'? 'active navbar-link' : 'navbar-link'} onClick={()=> onUpdateActiveLink('home')}>Home</Nav.Link>
-              <Nav.Link href='#project' className={activeLink === 'project'? 'active navbar-link' : 'navbar-link'} onClick={()=> onUpdateActiveLink('project')}>Project</Nav.Link>
-              <Nav.Link href='#skills' className={activeLink === 'skills'? 'active navbar-link' : 'navbar-link'} onClick={()=> onUpdateActiveLink('skills')}>Skills</Nav.Link>
-              <Nav.Link href='#contact' className={activeLink === 'contact'? 'active navbar-link' : 'navbar-link'} onClick={()=> onUpdateActiveLink('contact')}>Contact</Nav.Link>
-            </Nav>
-          </Navbar.Collapse> */}
+          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-md`} />
           <Navbar.Offcanvas
-              className="bg-dark"
-              id={`offcanvasNavbar-expand-sm`}
-              aria-labelledby={`offcanvasNavbarLabel-expand-sm`}
+              bg='dark' variant='dark'
+              id={`offcanvasNavbar-expand-md`}
+              aria-labelledby={`offcanvasNavbarLabel-expand-md`}
               placement="end"
             >
-              <Offcanvas.Header closeButton variant="light">
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-sm`}>
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-md`}>
                   Menu
                 </Offcanvas.Title>
               </Offcanvas.Header>
@@ -64,7 +56,7 @@ const NavBar = () => {
                 </Nav>
                 <Nav className='social-links'>
                   <Nav.Item className='social-link'><a className='social-github px-2' href="https://github.com/seonmo-kang" target="_blank" rel="noopener noreferrer"><Github bg="light"></Github></a></Nav.Item>
-                  <Nav.Item className='social-link'><a className='social-linkedin px-2' href="https://linkedin.com/seonmo-kang" target="_blank" rel="noopener noreferrer"><Linkedin></Linkedin></a></Nav.Item>
+                  <Nav.Item className='social-link'><a className='social-linkedin px-2' href="https://linkedin.com/in/seonmo-kang" target="_blank" rel="noopener noreferrer"><Linkedin></Linkedin></a></Nav.Item>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
