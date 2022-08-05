@@ -20,7 +20,7 @@ const Projects = () => {
             <Row className='projects-section mx-1 mx-md-2 mx-lg-5'>
                 <Col className='px-sm-3 pt-5'>
                     <div className='projects-bx p-md-3'>
-                        <h2 className='projects-subject'>
+                        <h2 className='projects-subject mb-5'>
                             <AnimatedLetters
                             letterClass={letterClass}
                             strArray={['F','e','a','t','u','r','e','d',' ','P','r','o','j','e','c','t','s']}
