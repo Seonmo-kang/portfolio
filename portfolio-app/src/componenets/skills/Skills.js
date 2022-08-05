@@ -3,6 +3,11 @@ import { Container, Col, Row } from 'react-bootstrap';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./skills.scss";
+import devops from '../../img/skills/devops.png';
+import web_browser from '../../img/skills/web-browser.png';
+import api from '../../img/skills/api.png';
+import sql_server from '../../img/skills/sql-server.png';
+import coding from '../../img/skills/coding.png';
 
 const Skills = () => {
     const responsive = {
@@ -38,27 +43,27 @@ const Skills = () => {
                     </div>
                     <Carousel responsive={responsive} infinite={true} className="skill-slider">
                         <div className="item">
-                            <img alt="image of circle and keep moving"/>
+                            <img src={web_browser} alt="image of circle and keep moving"/>
                             <h5>Web Development</h5>
-                            <p>HTML,JavaScript,CSS <br/>ReactJS, Redux, django</p>
+                            <p>HTML,JavaScript,CSS <br/>ReactJS, Redux, Django</p>
                         </div>
                         <div className='item'>
-                            <img alt="image of circle and keep moving"/>
+                            <img src={api} alt="image of circle and keep moving"/>
                             <h5>REST APIs</h5>
                             <p>HTTPS protocol, Web Socket</p>
                         </div>
                         <div className="item">
-                            <img alt="image of circle and keep moving"/>
+                            <img src={coding} alt="image of circle and keep moving"/>
                             <h5>Program languages</h5>
                             <p>Java, Python, JavaScript</p>
                         </div>
                         <div className='item'>
-                            <img alt="image of circle and keep moving"/>
+                            <img src={sql_server} alt="image of circle and keep moving"/>
                             <h5>SQL</h5>
-                            <p>MySQL</p>
+                            <p>MySQL, MongoDB</p>
                         </div>
                         <div className="item">
-                            <img alt="image of circle and keep moving"/>
+                            <img src={devops} alt="image of circle and keep moving"/>
                             <h5>DevOps</h5>
                             <p>AWS, NGINX, Firebase</p>
                         </div>

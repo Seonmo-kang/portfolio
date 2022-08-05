@@ -37,3 +37,10 @@
         margin: 15px 0 75px 0;
     }
 }
+
+.item {
+    & h5{
+        color:#B8B8B8;
+        font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    }
+}
